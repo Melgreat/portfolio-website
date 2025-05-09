@@ -1,0 +1,140 @@
+/* HomePage.css */
+.home-container {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.5rem;
+  box-shadow:
+    0 0 4px red,
+    0 5px 5px orange,
+    3px 0 3px violet;
+  padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  
+}
+
+.icons-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* left-align content */
+}
+
+.identity {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+.describe {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: inherit;
+  text-align: center;
+  border-left: 4px solid #ff6a00;
+  background: rgba(255, 255, 255, 0.05); /* translucent for dark/light */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.app.dark .describe {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: #ee0979;
+}
+
+.box-icon {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem; /* optional: slight spacing */
+}
+
+.icons {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  border: 0.5px solid brown;
+  border-radius: 13px;
+  padding: 2px;
+}
+
+.icons:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.app.light .icons {
+  filter: invert(0); /* black for light mode */
+}
+
+.app.dark .icons {
+  filter: invert(1); /* white for dark mode */
+}
+.profile-container {
+  flex-shrink: 0;
+}
+
+.gradient-sunset-violet {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.background {
+  position: absolute;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  width: 250px;
+  height: 250px;
+  border-radius: 120px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.profile-pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .greeting {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .identity {
+    font-size: 1.5rem;
+  }
+}

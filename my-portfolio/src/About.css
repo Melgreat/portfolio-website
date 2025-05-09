@@ -1,0 +1,56 @@
+
+/* About.css */
+
+.tell-me {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow:
+    0 0 4px red,
+    0 5px 5px orange,
+    3px 0 3px violet;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+/* Light theme support */
+.app.light .about-text {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tell-me {
+    padding: 2rem 1rem;
+  }
+
+  .gradient-text {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}

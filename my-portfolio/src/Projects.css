@@ -1,0 +1,75 @@
+.projects-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  scroll-margin-top: 100px;
+  background-color: inherit;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow:
+    0 0 4px red,
+    0 5px 5px orange,
+    3px 0 3px violet;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  color: inherit;
+  margin: 0.5rem 0;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
+.tech-stack span {
+  display: inline-block;
+  background: inherit;
+  padding: 0.3rem 0.7rem;
+  margin: 0.3rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: inherit;
+}
+.app.light .tech-stack span {
+  background-color: black;
+  color: white;
+}
+.app.dark .tech-stack span {
+  background-color: white;
+  color: black;
+}
+.coming-soon {
+  color: inherit;
+  font-style: italic;
+}
