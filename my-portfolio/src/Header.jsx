@@ -21,6 +21,9 @@ function HeaderPage() {
         <span></span>
         <span></span>
       </div>
+      <button className='theme-toggle' onClick={toggleTheme}>
+        {theme === "light" ? "🌙" : "🔆"}
+      </button>
     </header>
   );
 }
