@@ -1,61 +1,64 @@
-.header-container {
-    background-color: inherit;
-    padding: 1.2rem 2rem;
-    display: flex;
-    justify-content: space-between;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-color, #1a1a1a);
+  color: var(--text-color, #fff);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: currentColor;
+  transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--bg-color, #1a1a1a);
     align-items: center;
-    box-shadow: 0 4px 10px rgba(206, 206, 206, 0.1);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    display: none;
+    padding: 1rem 0;
   }
-  .tag-box {
+
+  .nav.open {
     display: flex;
-    flex-direction: row;
   }
-  .name {
-    margin: 0;
-    padding: 0.5rem 1rem;
-    font-size: 2rem;
-    font-weight: 500;
-    color: inherit;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-    font-weight: 900;
+
+  .hamburger {
+    display: flex;
   }
-  
-  .name:hover {
-    background-color: #f0f0f0;
-    color: #3498db;
-  }
-  .tags {
-    margin: 0;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: inherit;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-  }
-  
-  .tags:hover {
-    background-color: #f0f0f0;
-    color: #3498db;
-  }
-  
-  @media (max-width: 768px) {
-    .header-container {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-  
-    .tags {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.95rem;
-    }
-  }
-  
+}
