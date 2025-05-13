@@ -28,6 +28,7 @@
     0 5px 5px orange,
     3px 0 3px violet;
   transition: transform 0.3s ease;
+  background: inherit;
 }
 
 .project-card:hover {
@@ -61,15 +62,47 @@
   font-size: 0.85rem;
   color: inherit;
 }
+
 .app.light .tech-stack span {
   background-color: black;
   color: white;
 }
+
 .app.dark .tech-stack span {
   background-color: white;
   color: black;
 }
+
 .coming-soon {
   color: inherit;
   font-style: italic;
+}
+
+/* 📱 Responsive Styling for Mobile */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+
+  .tech-stack span {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
 }

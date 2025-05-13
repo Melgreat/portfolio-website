@@ -2,13 +2,15 @@
 import React, { useState } from 'react';
 import './Header.css';
 
-function HeaderPage() {
+function HeaderPage({toggleTheme, theme}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="header">
       <div className="logo">Melvin</div>
-
+      <button className='theme-toggle' onClick={toggleTheme}>
+        {theme === "light" ? "🌙" : "🔆"}
+      </button>
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
         <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
@@ -21,9 +23,7 @@ function HeaderPage() {
         <span></span>
         <span></span>
       </div>
-      <button className='theme-toggle' onClick={toggleTheme}>
-        {theme === "light" ? "🌙" : "🔆"}
-      </button>
+      
     </header>
   );
 }

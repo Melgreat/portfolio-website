@@ -13,7 +13,7 @@
 .theme-toggle-btn {
   position: fixed;
   top: 2rem;
-  right: 35rem;
+  right: 3rem;
   background-color: transparent;
   border: 2px solid currentColor;
   color: inherit;
@@ -34,6 +34,7 @@
   background-color: #fff;
   color: #1a1a1a;
 }
+
 /* Ensure html and body fill the screen */
 html, body {
   margin: 0;
@@ -63,15 +64,50 @@ section {
   background-color: inherit;
   color: inherit;
 }
+
+/* Gradient heading text */
 .gradient-text {
-  background: linear-gradient(90deg, #ff6a00, #ee0979); /* From orange to pink */
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* Fallback for some browsers */
+  background-clip: text;
   color: transparent;
   font-weight: 800;
   font-size: 2rem;
   text-align: center;
-  
+  margin-bottom: 2rem;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    right: 1rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .gradient-text {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle-btn {
+    top: 1rem;
+    right: 0.75rem;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .gradient-text {
+    font-size: 1.25rem;
+  }
+
+  section {
+    padding: 1rem 0.75rem;
+  }
+}
